@@ -1,0 +1,17 @@
+// Bootstrap
+@import "admin/config/bootstrap-overrides";
+@import "~bootstrap/scss/bootstrap";
+
+// Font awesome
+$fa-font-path:"~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+// Components
+@import "admin/components/header";
+@import "admin/components/footer";
+@import "admin/components/layout";
+@import "admin/components/forms";
+@import "admin/components/table";
+
+// pages
+@import "admin/pages/pages";

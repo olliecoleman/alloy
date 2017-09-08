@@ -1,0 +1,59 @@
+{{ define "content" }}
+    <div class="page-header">
+        <h2>Support Messages</h2>
+    </div>
+
+    {{ if .Messages }}
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th width="30%">Name</th>
+                        <th width="50%">Content</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {{ range .Messages }}
+                        <tr>
+                            <td>
+                                <h3>
+                                    {{ .Name.String }} <br>
+                                    <small>
+                                        <a href="mailto:{{ .Email.String }}">{{ .Email.String }}</a>
+                                    </small>
+                                </h3>
+                            </td>
+
+                            <td>
+                                <h5>
+                                    {{ .Subject.String }}
+                                </h5>
+
+                                <p>
+                                    {{ .Content.String }}
+                                </p>
+
+                            </td>
+
+                            <td class="text-left">
+                                <a href="/admin/support-messages/{{ .ID }}" data-method="delete" rel="nofollow" data-confirm="Are you sure?" class="btn btn-danger btn-sm">Destroy</a>
+                            </td>
+                        </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+
+        {{ .Pagination }}
+    {{ else }}
+        <div class="jumbotron text-center">
+            <p class="text-muted lead">
+                No messages yet.
+            </p>
+        </div>
+    {{ end }}
+
+
+{{ end }}

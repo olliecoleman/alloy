@@ -1,0 +1,12 @@
+{{ define "content" }}
+    <div class="page-header">
+        <h2>Edit Page</h2>
+    </div>
+    
+    <form action="/admin/pages/{{ .Page.ID }}" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        {{ $.CSRF }}
+
+        {{ template "_form" . }}
+    </form>
+{{ end }}

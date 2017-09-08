@@ -1,0 +1,14 @@
+// Config
+@import "frontend/config/variables";
+
+// Bootstrap
+@import "frontend/config/bootstrap-overrides";
+@import "frontend/config/bootstrap";
+
+// Components
+@import "frontend/components/layout";
+@import "frontend/components/header";
+@import "frontend/components/footer";
+
+// Pages
+@import "frontend/pages/home";

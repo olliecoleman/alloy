@@ -1,0 +1,36 @@
+{
+  "name": "alloy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "7.10.0"
+  },
+  "scripts": {
+    "watch": "node_modules/.bin/webpack --colors --watch",
+    "dist": "NODE_ENV=production node_modules/.bin/webpack -p"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "bootstrap": "^4.0.0-beta",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "exports-loader": "^0.6.4",
+    "expose-loader": "^0.7.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "font-awesome": "^4.7.0",
+    "froala-editor": "^2.6.0",
+    "jquery": "^3.2.1",
+    "jquery-ujs": "^1.2.2",
+    "node-sass": "^4.5.2",
+    "popper.js": "^1.12.5",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.5.0"
+  }
+}

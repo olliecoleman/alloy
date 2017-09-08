@@ -1,0 +1,21 @@
+app_root: .
+ignored_folders:
+- vendor
+- log
+- logs
+- tmp
+- node_modules
+- bin
+- templates
+included_extensions:
+- .go
+- .html
+build_target_path: ""
+build_path: /var/folders/17/5h774cwx5r9djz3q51n306z80000gp/T/
+build_delay: 500ms
+binary_name: alloy-build
+command_flags:
+- server
+command_env: []
+enable_colors: true
+log_name: ""

@@ -1,0 +1,51 @@
+{{ define "content" }}
+    <div class="page-header">
+        <h2>Pages</h2>
+    </div>
+
+    {{ if .Pages }}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th width="50%">Title</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {{ range .Pages }}
+                        <tr>
+                            <td>
+                                <h3>
+                                    {{ .Title.String }} 
+                                    <small>
+                                        <a href="/pages/{{ .Slug.String }}" target="_blank">view live &rarr;</a>
+                                    </small>
+                                </h3>
+                            </td>
+
+                            <td class="text-left">
+                                <a href="/admin/pages/{{ .ID }}" class="btn btn-light btn-sm">Show</a>
+                                <a href="/admin/pages/{{ .ID }}/edit" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="/admin/pages/{{ .ID }}" data-method="delete" rel="nofollow" data-confirm="Are you sure?" class="btn btn-danger btn-sm">Destroy</a>
+                            </td>
+                        </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+
+        {{ .Pagination }}
+    {{ else }}
+        <div class="jumbotron text-center">
+            <p class="text-muted lead">
+                No pages yet.
+            </p>
+            <p>
+                <a href="/admin/pages/new">Add new page</a>
+            </p>
+        </div>
+    {{ end }}
+
+
+{{ end }}

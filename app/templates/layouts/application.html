@@ -1,0 +1,58 @@
+{{ define "base" }}
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="csrf-token" content="{{ .CSRF_TOKEN }}" />
+            <meta name="csrf-param" content="gorilla.csrf.Token" />
+
+            <!-- social meta -->
+            <meta property="og:type" content="website">
+            <meta property="og:site_name" content="Alloy">
+            <meta property="og:locale" content="en_US">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="@Alloy">
+            <meta name="twitter:creator" content="@Alloy">
+
+            <link rel="stylesheet" href='{{ assetURL "/public/assets/frontend-style.css" }}'>
+            <script src='{{ assetURL "/public/assets/frontend.js" }}' async></script>
+
+            {{ template "meta" . }}
+        </head>
+
+        <body>
+            {{ template "header" . }}     
+            <div id="flash-container">
+                {{range .flashes}}
+                    <div class="alert alert-dismissible {{ .Class }}" role="alert">
+                        <div class="container">
+                            <div class="flash-inner">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                
+                                {{ .Message }}
+                            </div>
+                        </div>
+                    </div>
+                {{end}}
+            </div>
+
+            <div class="main-container">
+                {{ template "content" . }}
+            </div>
+
+            {{ template "footer" . }}
+
+            {{ template "sink" .}}
+        </body>
+    </html>
+{{ end }}
+
+{{ define "meta"}}{{end}}
+{{ define "header"}}{{end}}
+{{ define "content"}}{{end}}
+{{ define "footer"}}{{end}}
+{{ define "sink"}}{{end}}

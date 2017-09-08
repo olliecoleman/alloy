@@ -1,0 +1,38 @@
+package: github.com/olliecoleman/alloy
+import:
+- package: github.com/go-chi/chi
+  subpackages:
+  - middleware
+- package: github.com/gobuffalo/envy
+  version: ^1.1.0
+- package: github.com/gorilla/csrf
+  version: ^1.5.0
+- package: github.com/gorilla/securecookie
+  version: ^1.1.0
+- package: github.com/gorilla/sessions
+- package: github.com/jmoiron/sqlx
+- package: github.com/lib/pq
+- package: github.com/markbates/pop
+  version: ^3.33.0
+  subpackages:
+  - nulls
+- package: github.com/markbates/refresh
+  version: ^1.3.3
+  subpackages:
+  - refresh
+- package: github.com/microcosm-cc/bluemonday
+- package: github.com/pkg/errors
+  version: ^0.8.0
+- package: github.com/pressly/douceur
+  version: ^0.2.0
+  subpackages:
+  - inliner
+- package: github.com/pressly/goose
+  version: ^2.1.0
+- package: github.com/satori/go.uuid
+  version: ^1.1.0
+- package: github.com/spf13/cobra
+- package: golang.org/x/crypto
+  subpackages:
+  - bcrypt
+- package: gopkg.in/gomail.v2

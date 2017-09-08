@@ -1,0 +1,95 @@
+{{ define "meta" }}
+    <title>Contact Us</title>
+    <meta name="description" content="Please send your comments and suggestions using this form. We will get back to you shortly." />
+{{ end }}
+
+{{ define "content" }}
+<section class="support-message">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="page-header">
+                    <h1>
+                        Contact Us
+                    </h1>
+        
+                    <p>
+                        Please send your comments and suggestions using this form. We will get back to you shortly.
+                    </p>
+                </div><!-- page-header -->
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-8">
+                <form action="/contact" method="POST" novalidate>
+                    {{ .CSRF }} 
+
+                    {{ with .Message }}
+
+                        {{ if .Errors }}
+                            <div class="alert alert-danger" role="alert">
+                                Oops, something went wrong! Please check the errors below.
+                            </div>
+                        {{ end }}
+
+                        <div class="form-group">
+                            <label for="name" class="control-label">Name <sup title="Required" class="text-danger">*</sup></label>
+                            <input type="text" class="form-control {{ if .Errors.Name }} is-invalid {{ end }}" name="name" id="name" placeholder="Your name..."  value="{{ .Name.String }}" required />
+                            {{ with .Errors.Name }}
+                                <p class="invalid-feedback">{{ . }}</p>
+                            {{ end }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="control-label">Email <sup title="Required" class="text-danger">*</sup></label>
+                            <input type="email" class="form-control {{ if .Errors.Email }} is-invalid {{ end }}" name="email" id="email" placeholder="you@email.com"  value="{{ .Email.String }}" required />
+                            {{ with .Errors.Email }}
+                                <p class="invalid-feedback">{{ . }}</p>
+                            {{ end }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="control-label">Subject <sup title="Required" class="text-danger">*</sup></label>
+                            <input type="text" class="form-control {{ if .Errors.Subject }} is-invalid {{ end }}" name="subject" id="subject" placeholder="e.g: Question about pricing etc." value="{{ .Subject.String }}" required />
+                            {{ with .Errors.Subject }}
+                                <p class="invalid-feedback">{{ . }}</p>
+                            {{ end }}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="content" class="control-label">Content <sup title="Required" class="text-danger">*</sup></label>
+                            <textarea class="form-control {{ if .Errors.Content }} is-invalid {{ end }}" name="content" rows="10" id="content" placeholder="Your message..." required >{{ .Content.String }}</textarea>
+                            {{ with .Errors.Content }}
+                                <p class="invalid-feedback">{{ . }}</p>
+                            {{ end }}
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Send" class="btn btn-lg btn-primary" data-disable-with="Sending...">
+                        </div>
+                    {{ end }}
+
+                </form>    
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Social</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Connect with us on social media</h6>
+                        <a href="https://twitter.com/_olliec" class="card-link">Twitter</a>
+                        <a href="https://www.facebook.com/coleman.ollie.1" class="card-link">Facebook</a>
+                        <a href="https://github.com/olliecoleman" class="card-link">Github</a>
+                    </div>
+                </div><!-- /card -->
+            </div><!-- /col -->
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}

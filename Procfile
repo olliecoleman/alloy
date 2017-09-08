@@ -1,0 +1,1 @@
+web: alloy server -p

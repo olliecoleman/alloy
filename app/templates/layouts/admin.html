@@ -1,0 +1,55 @@
+{{ define "base" }}
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="csrf-token" content="{{ .CSRF_TOKEN }}" />
+		<meta name="csrf-param" content="gorilla.csrf.Token" />
+
+		<title>Alloy Admin</title>
+
+		<link rel="stylesheet" href="/public/assets/admin-style.css">
+	</head>
+
+	<body class="admin">
+		{{ template "header" . }}
+		
+		<div id="flash-container">
+			{{range .flashes}}
+				<div class="alert alert-dismissible {{ .Class }}" role="alert">
+					<div class="container">
+						<div class="flash-inner">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							
+							{{ .Message }}
+						</div>
+					</div>
+				</div>
+			{{end}}
+		</div>
+
+		<div class="container main-container">
+			{{ template "content" . }}
+		</div>
+
+		{{ template "footer" . }}
+
+		<script src="/public/assets/admin.js"></script>
+		{{ template "sink" .}}
+
+	</body>
+
+	</html>
+{{ end }} 
+
+{{ define "header"}}{{end}}
+{{ define "content"}}{{end}}
+{{ define "footer"}}{{end}}
+{{ define "sink"}}{{end}}

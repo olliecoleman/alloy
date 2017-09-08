@@ -1,0 +1,30 @@
+{{ define "content" }}
+    {{ with .Page }}
+        <div class="row">
+            <div class="col">
+                <div class="page-header">
+                    <h2>
+                        {{ .Title.String }} <br>
+                        <small>
+                            {{ .Slug.String }}
+                        </small>
+                    </h2>
+                </div>
+                <!-- page-heading -->
+
+
+                <div class="content">
+                    {{ raw .Content.String }}
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <a href="/admin/pages/{{ .ID }}/edit" class="btn btn-primary btn-sm">Edit</a>
+        <a href="/admin/pages/{{ .ID }}" data-method="delete" rel="nofollow" data-confirm="Are you sure?" class="btn btn-danger btn-sm">Destroy</a>
+
+    {{ end }}
+{{ end }}

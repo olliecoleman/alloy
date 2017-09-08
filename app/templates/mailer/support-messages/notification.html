@@ -1,0 +1,13 @@
+{{ define "meta" }}
+    <title>New support message</title>
+{{ end }}
+
+{{ define "preheader" }}
+    New support message
+{{ end }}
+
+{{ define "content" }}
+    <p>Name: <strong>{{ .Name }}</strong></p>
+    <p>Email: <strong>{{ .Email }}</strong></p>
+    <p>{{ .Message }}</p>
+{{ end }}

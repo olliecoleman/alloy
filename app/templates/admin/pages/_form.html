@@ -1,0 +1,78 @@
+{{ define "_form" }}
+    {{ with .Page }}   
+      
+        {{ if .Errors }}
+            <div class="alert alert-danger">
+                <p>Oops, something went wrong! Please check the errors below.</p>
+            </div>
+        {{ end }}   
+
+        <div class="form-group {{ if .Errors.Title }} has-error {{ end }}">
+            <label for="title" class="control-label">Title</label>
+            <input type="text" id="title" class="form-control" name="title" value="{{ .Title.String }}" data-sluggify="#page-slug-input">
+            {{ with .Errors.Title }}
+                <p class="text-danger">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        <div class="form-group {{ if .Errors.Slug }} has-error {{ end }}">
+            <label for="slug" class="control-label">Slug</label>
+            <input type="text" id="slug" class="form-control js-slug-field" id="page-slug-input" name="slug" value="{{ .Slug.String }}">
+            {{ with .Errors.Slug }}
+                <p class="text-danger">{{ . }}</p>
+            {{ end }}
+        </div>
+
+
+        <div class="form-group {{ if .Errors.Layout }} has-error {{ end }}">
+            <label for="layout" class="control-label">Layout</label>
+            <select name="layout" id="layout" class="form-control">
+                <option value="two-col" {{ if eq .Layout.String "two-col" }} selected="selected" {{ end }}>2 Column</option>
+                <option value="full" {{ if eq .Layout.String "full" }} selected="selected" {{ end }}>Full</option>
+            </select>
+            {{ with .Errors.Layout }}
+                <p class="text-danger">{{ . }}</p>
+            {{ end }}
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-header">
+                <strong>SEO Settings</strong>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group {{ if .Errors.PageTitle }} has-error {{ end }}">
+                    <label for="page_title" class="control-label">Page Title</label>
+                    <input type="text" id="page_title" class="form-control" name="page_title" value="{{ .PageTitle.String }}">
+                    {{ with .Errors.PageTitle }}
+                        <p class="text-danger">{{ . }}</p>
+                    {{ end }}
+                </div>
+
+                <div class="form-group {{ if .Errors.MetaDescription }} has-error {{ end }}">
+                    <label for="meta_description" class="control-label">Meta Description</label>
+                    <textarea name="meta_description" id="meta_description" class="form-control" cols="30" rows="10">{{ .MetaDescription.String }}</textarea>
+                    {{ with .Errors.MetaDescription }}
+                        <p class="text-danger">{{ . }}</p>
+                    {{ end }}
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="form-group {{ if .Errors.Content }} has-error {{ end }}">
+            <label for="editor" class="control-label">Content</label>
+            <textarea name="content" class="form-control" cols="30" rows="10" id="editor">{{ .Content.String }}</textarea>
+            {{ with .Errors.Content }}
+                <p class="text-danger">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-lg btn-primary" data-disable-with="Saving...">
+        </div>
+    
+    {{ end }}
+{{ end }}

@@ -1,0 +1,32 @@
+{{ define "content" }}
+<div class="container container-sm">
+    <div class="row">
+        <div class="col">
+
+            <div class="page-header">
+                <h2>Admin Sign in</h2>
+            </div>
+
+            <form action="/admin/sessions" method="POST">
+                {{ .CSRF }}
+
+                <div class="form-group">
+                    <label for="email" class="control-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" value="{{ .Email }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="control-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="secret">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" data-disable-with="Submitting..." >
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+
+
+{{ end }}

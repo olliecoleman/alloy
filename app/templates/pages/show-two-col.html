@@ -1,0 +1,49 @@
+{{ define "meta" }}
+    <title>{{ .Page.PageTitle.String }}</title>
+    <meta name="description" content="{{ .Page.MetaDescription.String }}" />
+
+    <meta itemprop="name" content="{{ .Page.PageTitle.String }}">
+    <meta itemprop="description" content="{{ .Page.MetaDescription.String }}">
+
+    <meta property="og:title" content="{{ .Page.PageTitle.String }}">
+    <meta property="og:description" content="{{ .Page.MetaDescription.String }}">
+
+    <meta name="twitter:title" content="{{ .Page.PageTitle.String }}">
+    <meta name="twitter:description" content="{{ .Page.MetaDescription.String }}">
+{{ end }}
+
+{{ define "content" }}
+    <section class="page-show">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-9">
+                    <div class="page-header">
+                        <h1>
+                            {{ .Page.Title.String }}
+                        </h1>
+                    </div>
+
+                    <div class="page-content">
+                        {{ raw .Page.Content.String }}
+                    </div>
+
+                </div><!-- col-lg-9-->
+
+
+                <div class="col">
+                    <aside class="page-sidebar">
+                        <div class="card">
+                            <img class="card-img-top" src="http://placehold.it/400x300" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div><!-- col -->
+            </div>
+        </div><!--container -->
+    </section>
+{{ end }}

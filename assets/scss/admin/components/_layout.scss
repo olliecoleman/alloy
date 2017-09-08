@@ -1,0 +1,18 @@
+.main-container {
+    margin: 1em auto;
+    .breakword {
+        word-break: break-word;
+    }
+
+    .page-header {
+        border-bottom: 1px solid $gray-300;
+        margin-bottom: 1em;
+    }
+}
+
+#flash-container {
+    .flash-inner {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+}

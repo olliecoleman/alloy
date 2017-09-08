@@ -1,0 +1,27 @@
+label {
+    font-weight: 500;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+.fr-element.fr-view {
+    .froala-read-more-break {
+        height: 2px;
+        background: black;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+form.link {
+    display: inline-block;
+}
+
+.badge {
+    &.badge-primary {
+        background: theme-color("primary");
+        color: #fff;
+    }
+}
