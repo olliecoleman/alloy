@@ -15,6 +15,79 @@
                     <a class="btn btn-primary btn-lg" href="https://github.com/olliecoleman/alloy" role="button">Download from Github</a>
                 </p>
             </div>
+
+            <div class="details">
+                <div class="row">
+                    <div class="col">
+                        <h3>Packages Used</h3>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Backend</strong>
+                            </div>
+
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-md-3">Router:</dt>
+                                    <dd class="col-md-9">go-chi/chi</dd>
+        
+                                    <dt class="col-md-3">DB:</dt>
+                                    <dd class="col-md-9">
+                                        lib/pq, jmoiron/sqlx, markbates/pop/nulls, pressly/goose
+                                    </dd>
+        
+                                    <dt class="col-md-3">Emails:</dt>
+                                    <dd class="col-md-9">
+                                        pressly/douceur, gopkg.in/gomail.v2
+                                    </dd>
+        
+                                    <dt class="col-md-3">Security:</dt>
+                                    <dd class="col-md-9">
+                                        crypto/bcrypt, gorilla/csrf, gorilla/securecookie, gorilla/sessions
+                                    </dd>
+        
+                                    <dt class="col-md-3">Utilities:</dt>
+                                    <dd class="col-md-9">
+                                        markbates/refresh, microcosm-cc/bluemonday, spf13/cobra
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div><!-- /card -->
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Frontend</strong>
+                            </div>
+
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-md-4">Development:</dt>
+                                    <dd class="col-md-8">Webpack, Babel</dd>
+        
+                                    <dt class="col-md-4">JS: <br /><small class="text-muted">(in admin panel)</small></dt>
+                                    <dd class="col-md-8">
+                                        Bootstrap (v4.0), jQuery, Froala Editor
+                                    </dd>
+        
+                                    <dt class="col-md-4">SCSS:</dt>
+                                    <dd class="col-md-8">
+                                        Bootstrap (v4.0)
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div><!-- /card -->
+
+                </div>
+            </div><!-- details -->
         </div>
     </section><!-- /home -->
 {{ end }}
