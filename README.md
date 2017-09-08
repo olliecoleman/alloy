@@ -103,6 +103,25 @@ Now you can open your browser and navigate to http://localhost:1212 to see it in
     └── webpack.config.js
 ```
 
+
+### Screenshots
+
+<div align="center">
+  <img src="./assets/images/home.jpg" alt="Home page">
+</div>
+
+<div align="center">
+  <img src="./assets/images/contact.jpg" alt="Contact page">
+</div>
+
+<div align="center">
+  <img src="./assets/images/dashboard-1.jpg" alt="Dashboard">
+</div>
+
+<div align="center">
+  <img src="./assets/images/dashboard-2.jpg" alt="Dashboard">
+</div>
+
 ----------
 
 If you have any questions or comments, please get in touch via email or open an issue. I would welcome your suggestions and pull requests. 
