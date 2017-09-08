@@ -12,9 +12,7 @@ import (
 var RootCmd = &cobra.Command{
 	Use:   "alloy",
 	Short: "Boilerplate for creating web apps in Go (golang)",
-	Long: `Alloy is a starter template for creating web applications. It is written using Go language (golang).
-Alloy is an omakase of sorts. It brings together many useful libraries and 
-tools that you might need to build (CRUD) web applications.`,
+	Long:  `Alloy is a starter template for creating web applications using Go programming language. It does not aim to be a web framework but is instead a collection of useful libraries and packages that acts a sensible starting point.`,
 }
 
 // Execute runs the root command

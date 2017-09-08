@@ -6,7 +6,7 @@ Recently, I decided to build my latest [side project](https://www.growthmetrics.
 
 Alloy uses **Webpack** for managing front-end assets (Javascript and CSS), so you need to have Node.js and NPM installed in order to use that. This boilerplate also includes a separate 'admin panel' which acts as a CMS for adding pages, managing users etc.
 
-> *\<shameless plug>* GrowthMetrics is a nifty little tool to measure your business's customer satisfaction using a metric called NPS (Net Promoter Score). You can signup for the early access (and early bird discount) here - https://www.growthmetrics.io/beta.*\</shameless plug>*
+> *\<shameless plug>* GrowthMetrics is a nifty little tool to measure your business's customer satisfaction using a metric called NPS (Net Promoter Score). You can signup for the early access (and early bird discount) here - [https://www.growthmetrics.io/beta](https://www.growthmetrics.io/beta).
 
 
 ### Packages used
