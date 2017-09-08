@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/olliecoleman/alloy/app/services"
 	"github.com/gobuffalo/envy"
+	"github.com/olliecoleman/alloy/app/services"
 	"github.com/pressly/goose"
 )
 
 func SetupDB() {
-	td := "postgres://postgres:@localhost/alloy_test?sslmode=disable"
+	td := envy.Get("TEST_DATABASE_URL", "postgres://postgres:@localhost/alloy_test?sslmode=disable")
 	envy.Set("DATABASE_URL", td)
 	migrationsDir, err := envy.MustGet("MIGRATIONS_DIR")
 	if err != nil {

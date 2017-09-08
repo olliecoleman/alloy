@@ -11,9 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/olliecoleman/alloy/app/router"
-	"github.com/olliecoleman/alloy/app/services"
 	"github.com/gobuffalo/envy"
+	"github.com/olliecoleman/alloy/app/router"
 )
 
 var (
@@ -22,7 +21,6 @@ var (
 
 func SetupServer() {
 	envy.Set("ENVIRONMENT", "test")
-	services.InitDevLogger()
 	server = httptest.NewServer(router.HandleRoutes())
 }
 
