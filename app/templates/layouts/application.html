@@ -20,6 +20,10 @@
             <script src='{{ assetURL "/public/assets/frontend.js" }}' async></script>
 
             {{ template "meta" . }}
+
+            {{ if eq .Meta.Env "production" }}
+            <!-- Add meta tags specific to production environment (analytics etc) -->
+            {{ end }}
         </head>
 
         <body>

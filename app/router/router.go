@@ -78,6 +78,9 @@ func HandleRoutes() *chi.Mux {
 		r.Post("/contact", h(handlers.CreateSupportMessage))
 		r.Get("/pages/{slug}", h(handlers.ShowPage))
 
+		// Sitemap
+		r.Get("/sitemap.xml", h(handlers.RenderSitemap))
+
 		// Admin auth
 		r.Get("/admin/sessions/new", h(admin.GetLogin))
 		r.Post("/admin/sessions", h(admin.PostLogin))

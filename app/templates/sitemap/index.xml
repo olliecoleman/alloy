@@ -1,0 +1,26 @@
+{{ define "base" }}<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>{{ .Host }}</loc>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>{{ .Host }}/contact/new</loc>
+        <priority>1</priority>
+    </url>
+
+    {{ range .Pages }}
+    <url>
+        <loc>{{ $.Host }}/pages/{{ .Slug.String }}</loc>
+        <lastmod>{{ .InsertedAt.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    {{ end }}
+</urlset>
+
+{{ end }}
