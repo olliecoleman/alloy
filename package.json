@@ -1,6 +1,8 @@
 {
   "name": "alloy",
   "version": "1.0.0",
+  "description": "Boiler plate for creating web apps using Go",
+  "author": "Oliver Coleman",
   "main": "index.js",
   "license": "MIT",
   "engines": {
@@ -9,6 +11,10 @@
   "scripts": {
     "watch": "node_modules/.bin/webpack --colors --watch",
     "dist": "NODE_ENV=production node_modules/.bin/webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olliecoleman/alloy.git"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
