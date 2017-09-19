@@ -9,6 +9,8 @@ Alloy uses **Webpack** for managing front-end assets (Javascript and CSS), so yo
 > *\<shameless plug>* GrowthMetrics is a nifty little tool to measure your business's customer satisfaction using a metric called NPS (Net Promoter Score). You can signup for the early access (and early bird discount) here - [https://www.growthmetrics.io/beta](https://www.growthmetrics.io/beta).
 
 
+** NOTE: ** Currently this uses Postgres as the database, so you would need postgres to be running before you start the application. In future releases, I will be adding support for other databases.
+
 ### Packages used
 - go-chi/chi
 - lib/pq
@@ -54,6 +56,26 @@ cd alloy
 ```
 glide install
 npm install
+```
+
+3. Create the following environment variables.
+```
+PORT=1212
+ENVIRONMENT=development (change to 'production' in the production environment)
+HOST=localhost
+DATABASE_URL=XXX (replace)
+TEST_DATABASE_URL=XXX (replace)
+MIGRATIONS_DIR=app/migrations
+CSRF_KEY=XXX (replace with 32 character string (use the gen-key command))
+HASH_KEY=XXX (replace with 64 character string (use the gen-key command))
+BLOCK_KEY=XXX (replace with 32 character string (use the gen-key command))
+SMTP_HOST=127.0.0.1
+SMTP_PORT=1025
+SMTP_USERNAME=__REPLACE__
+SMTP_PASSWORD=__REPLACE__
+MAILER_FROM=XXX (e.g: support@alloy.dev)
+MAILER_HOST=http://localhost:1212
+ASSET_URL=http://localhost:1212 (if you are using a CDN in production, this can be set to that URL)
 ```
 
 3. Start the development server
