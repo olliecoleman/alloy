@@ -2,7 +2,7 @@
 Alloy is a starter template for creating web applications using Go programming language.
 It does not aim to be a web framework but is instead a collection of useful libraries and packages that acts a sensible starting point.
 
-Recently, I decided to build my latest [side project](https://www.growthmetrics.io) using Go. I started off with just the standard library and then gradually added a few recommended packages for performing common tasks like database calls (sqlx), migrations (pressly/goose) and sending emails (gomail). This boilerplate has been extracted from that side project. 
+Recently, I decided to build my latest [side project](https://www.growthmetrics.io) using Go. I started off with just the standard library and then gradually added a few recommended packages for performing common tasks like database calls (sqlx), migrations (pressly/goose) and sending emails (gomail). This boilerplate has been extracted from that side project.
 
 Alloy uses **Webpack** for managing front-end assets (Javascript and CSS), so you need to have Node.js and NPM installed in order to use that. This boilerplate also includes a separate 'admin panel' which acts as a CMS for adding pages, managing users etc.
 
@@ -10,6 +10,13 @@ Alloy uses **Webpack** for managing front-end assets (Javascript and CSS), so yo
 
 
 ** NOTE: ** Currently this uses Postgres as the database, so you would need postgres to be running before you start the application. In future releases, I will be adding support for other databases.
+
+### Requirements
+
+- [PostgreSQL](https://hub.docker.com/_/postgres/)
+- [Go](https://golang.org/)
+- [Glide](https://glide.readthedocs.io/en/latest/)
+- [Node and NPM](https://nodejs.org/en/)
 
 ### Packages used
 - go-chi/chi
@@ -53,32 +60,23 @@ cd alloy
 ```
 
 2. Install the dependencies
-```
+```shell
 glide install
 npm install
 ```
 
-3. Create the following environment variables.
+3. Create an `.env` file at the root of the project as indicated in `docs/env.md`.
+
+To generate the hashes, here a few examples
+
 ```
-PORT=1212
-ENVIRONMENT=development (change to 'production' in the production environment)
-HOST=localhost
-DATABASE_URL=XXX (replace)
-TEST_DATABASE_URL=XXX (replace)
-MIGRATIONS_DIR=app/migrations
-CSRF_KEY=XXX (replace with 32 character string (use the gen-key command))
-HASH_KEY=XXX (replace with 64 character string (use the gen-key command))
-BLOCK_KEY=XXX (replace with 32 character string (use the gen-key command))
-SMTP_HOST=127.0.0.1
-SMTP_PORT=1025
-SMTP_USERNAME=__REPLACE__
-SMTP_PASSWORD=__REPLACE__
-MAILER_FROM=XXX (e.g: support@alloy.dev)
-MAILER_HOST=http://localhost:1212
-ASSET_URL=http://localhost:1212 (if you are using a CDN in production, this can be set to that URL)
+alloy gen-key // generates a 32-length key
+alloy gen-key -s 64 // generates a 64-length key
 ```
 
-3. Start the development server
+4. `source .env` to apply the env variables
+
+5. Start the development server
 ```
 go install
 alloy dev
@@ -146,7 +144,7 @@ Now you can open your browser and navigate to http://localhost:1212 to see it in
 
 ----------
 
-If you have any questions or comments, please get in touch via email or open an issue. I would welcome your suggestions and pull requests. 
+If you have any questions or comments, please get in touch via email or open an issue. I would welcome your suggestions and pull requests.
 
 
 Oliver Coleman<br>
