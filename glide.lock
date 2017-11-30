@@ -1,0 +1,104 @@
+hash: ef44a448b422e18022a799e553e3dca61db4a25e7430aeffae187096e17284e3
+updated: 2017-11-30T15:54:15.550819+01:00
+imports:
+- name: github.com/andybalholm/cascadia
+  version: 349dd0209470eabd9514242c688c403c0926d266
+- name: github.com/aymerick/douceur
+  version: 7176f146738114e7386d4f915a0bbf55945e22c9
+  subpackages:
+  - css
+  - parser
+- name: github.com/fatih/color
+  version: 5df930a27be2502f99b292b7cc09ebad4d0891f4
+- name: github.com/fsnotify/fsnotify
+  version: 4da3e2cfbabc9f751898f250b49f2439785783a1
+- name: github.com/go-chi/chi
+  version: 687d2792aedd8e8ac3bbd8592cf55b91d7ea8ce9
+  subpackages:
+  - middleware
+- name: github.com/gobuffalo/envy
+  version: e613c80275b86293880eddeb27417c9a7c670ff3
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/csrf
+  version: 69581736821c33d85bbf378f42f6ad864dbd85de
+- name: github.com/gorilla/css
+  version: 398b0b046082ecb3694c01bec6b336a06a4e530a
+  subpackages:
+  - scanner
+- name: github.com/gorilla/securecookie
+  version: 667fe4e3466a040b780561fe9b51a83a3753eefc
+- name: github.com/gorilla/sessions
+  version: a3acf13e802c358d65f249324d14ed24aac11370
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/jmoiron/sqlx
+  version: 99f3ad6d85ae53d0fecf788ab62d0e9734b3c117
+  subpackages:
+  - reflectx
+- name: github.com/joho/godotenv
+  version: 6d367c18edf6ca7fd004efd6863e4c5728fa858e
+- name: github.com/lib/pq
+  version: 83612a56d3dd153a94a629cd64925371c9adad78
+  subpackages:
+  - oid
+- name: github.com/markbates/going
+  version: 0576708c56cea02331f864fe6e157ac7841923e4
+  subpackages:
+  - defaults
+- name: github.com/markbates/pop
+  version: fd3f5a10dad89bbd5d257fef56de9ac2cacba860
+  subpackages:
+  - nulls
+- name: github.com/markbates/refresh
+  version: 31a58af168f3788ce36d49f66aca4b439f64c7d4
+  subpackages:
+  - refresh
+- name: github.com/mattn/go-colorable
+  version: 5411d3eea5978e6cdc258b30de592b60df6aba96
+  repo: https://github.com/mattn/go-colorable
+- name: github.com/mattn/go-isatty
+  version: 57fdcb988a5c543893cc61bce354a6e24ab70022
+  repo: https://github.com/mattn/go-isatty
+- name: github.com/microcosm-cc/bluemonday
+  version: 68fecaef60268522d2ac3f0123cec9d3bcab7b6e
+- name: github.com/mitchellh/go-homedir
+  version: b8bc1bf767474819792c23f32d8286a45736f1c6
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/pressly/douceur
+  version: c5c95ec357c8235fbd7f34e8c843d36783f3fad9
+  subpackages:
+  - inliner
+- name: github.com/pressly/goose
+  version: 056a4d47dcc4d67fa3947a4f13945a5c690e568b
+- name: github.com/PuerkitoBio/goquery
+  version: 1a71cc719d0d5b9e4f14ae072bef08b576b0bab5
+- name: github.com/satori/go.uuid
+  version: 879c5887cd475cd7864858769793b2ceb0d44feb
+- name: github.com/spf13/cobra
+  version: 1be1d2841c773c01bee8289f55f7463b6e2c2539
+- name: github.com/spf13/pflag
+  version: 4c012f6dcd9546820e378d0bdda4d8fc772cdfea
+- name: golang.org/x/crypto
+  version: 94eea52f7b742c7cbe0b03b22f0c4c8631ece122
+  subpackages:
+  - bcrypt
+  - blowfish
+- name: golang.org/x/net
+  version: a8b9294777976932365dabb6640cf1468d95c70f
+  subpackages:
+  - html
+  - html/atom
+- name: golang.org/x/sys
+  version: e24f485414aeafb646f6fca458b0bf869c0880a1
+  repo: https://go.googlesource.com/sys
+  subpackages:
+  - unix
+- name: gopkg.in/alexcesaro/quotedprintable.v3
+  version: 2caba252f4dc53eaf6b553000885530023f54623
+- name: gopkg.in/gomail.v2
+  version: 81ebce5c23dfd25c6c67194b37d3dd3f338c98b1
+- name: gopkg.in/yaml.v2
+  version: 287cf08546ab5e7e37d55a84f7ed3fd1db036de5
+testImports: []

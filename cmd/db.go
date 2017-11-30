@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/olliecoleman/alloy/app/services"
 	"github.com/gobuffalo/envy"
+	"github.com/olliecoleman/alloy/app/services"
 	"github.com/pressly/goose"
 	"github.com/spf13/cobra"
 )

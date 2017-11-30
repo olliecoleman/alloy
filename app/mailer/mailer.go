@@ -33,8 +33,8 @@ var s gomail.SendCloser
 var host string
 
 func init() {
-	host = envy.Get("MAILER_HOST", "http://alloydev.me")
-	s = setupSMTP()
+	// host = envy.Get("MAILER_HOST", "http://alloydev.me")
+	// s = setupSMTP()
 }
 
 func NewMail(to, subject string) *Message {
