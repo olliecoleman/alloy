@@ -11,6 +11,13 @@ Alloy uses **Webpack** for managing front-end assets (Javascript and CSS), so yo
 
 ** NOTE: ** Currently this uses Postgres as the database, so you would need postgres to be running before you start the application. In future releases, I will be adding support for other databases.
 
+### Requirements
+
+- [PostgreSQL](https://hub.docker.com/_/postgres/)
+- [Go](https://golang.org/)
+- [Glide](https://glide.readthedocs.io/en/latest/)
+- [Node and NPM](https://nodejs.org/en/)
+
 ### Packages used
 - go-chi/chi
 - lib/pq
@@ -53,12 +60,19 @@ cd alloy
 ```
 
 2. Install the dependencies
-```
+```shell
 glide install
 npm install
 ```
 
 3. Create an `.env` file at the root of the project as indicated in `docs/env.md`.
+
+To generate the hashes, here a few examples
+
+```
+alloy gen-key // generates a 32-length key
+alloy gen-key -s 64 // generates a 64-length key
+```
 
 4. `source .env` to apply the env variables
 
